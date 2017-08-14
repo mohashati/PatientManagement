@@ -3,6 +3,9 @@ package com.patientManagement.repositories.Implementation;
 
 import com.patientManagement.domain.Doctor;
 import com.patientManagement.repositories.DoctorRepository;
+import com.patientManagement.repositories.DiagnosisRepository;
+
+
 
 import java.util.HashMap;
 import java.util.Map;
@@ -10,10 +13,12 @@ import java.util.Map;
 /**
  * Created by tmoshasha on 2017/08/13.
  */
+
 public class DoctorRepositoryImplementation implements  DoctorRepository {
     private static DoctorRepositoryImplementation repository = null;
     private Map<String, Doctor> doctorTable;
     private DoctorRepositoryImplementation(){doctorTable = new HashMap<String, Doctor>();}
+
 
     public static DoctorRepositoryImplementation getInstance(){
         if(repository ==null)

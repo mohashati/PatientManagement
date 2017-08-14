@@ -9,7 +9,9 @@ import java.util.Map;
 /**
  * Created by tmoshasha on 2017/08/13.
  */
+
 public class PatientRepositoryImplementation implements PatientRepository {
+
     private static PatientRepositoryImplementation repository = null;
     private Map<String, Patient> patientTable;
     private PatientRepositoryImplementation(){patientTable = new HashMap<String, Patient>();}
@@ -36,7 +38,7 @@ public class PatientRepositoryImplementation implements PatientRepository {
         Patient updatePatient = patientTable.get(patient.getId());
         return updatePatient;
     }
-
+	
     public void delete(String id) {
         patientTable.remove(id);
     }

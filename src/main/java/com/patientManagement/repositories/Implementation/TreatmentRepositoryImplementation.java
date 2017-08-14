@@ -3,12 +3,18 @@ package com.patientManagement.repositories.Implementation;
 import com.patientManagement.domain.Treatment;
 import com.patientManagement.repositories.TreatmentRepository;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.RequestMapping;
+
 import java.util.HashMap;
 import java.util.Map;
 
 /**
  * Created by tmoshasha on 2017/08/13.
  */
+
 public class TreatmentRepositoryImplementation implements TreatmentRepository {
 
 
@@ -21,7 +27,6 @@ public class TreatmentRepositoryImplementation implements TreatmentRepository {
             repository = new TreatmentRepositoryImplementation();
         return repository;
     }
-
 
     public Treatment create(Treatment treatment) {
         treatmentTable.put(treatment.getId(),treatment);
